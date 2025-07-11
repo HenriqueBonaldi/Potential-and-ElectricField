@@ -1,4 +1,4 @@
-# Potencial and eletric field calculation of two metallic conductors 
+# Potential and electric field calculation of two metallic conductors 
 
 Check out the cool images inside 'output' folder
 
@@ -8,8 +8,6 @@ Check out the cool images inside 'output' folder
 !pip install dataframe_image
 !apt-get install -y xvfb 
 ```
-
-
 
 ## 🛠️ Installation on VSCode, etc
 

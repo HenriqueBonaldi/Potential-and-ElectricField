@@ -153,13 +153,14 @@ while (delt > 0.001):
   delt=0
   delt = potencial(delt)
 
+df = pd.DataFrame(net)
+pd.set_option('display.precision', 1)
+
 plt.title('Figura 3: Caixa com condutores - Representação do gradiente de potencial')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.imshow(df, cmap='plasma')
 
-pd.set_option('display.precision', 1)
-df = pd.DataFrame(net)
 styled_df = (df.style.set_properties(**{'background-color': 'lightgrey',
                            'color': 'black',
                            'border-color': 'darkgrey',
@@ -200,7 +201,6 @@ styled_df2 = (df_E.style.set_properties(**{'background-color': 'lightgrey',
 styled_df2.to_html("tabela_.html")
 
 # Configuracao do plotting
-
 plt.figure(1, figsize=[6.4,6.4])
 plt.contour(x, y, net, 40,cmap="plasma")
 plt.title('Figura 4: Representação de curvas Equipotenciais')
@@ -225,7 +225,6 @@ plt.ylabel('y')
 plt.show()
 
 # curvas de nível tridimensional:
-
 plt.figure(figsize=[9,9])
 ax = plt.axes(projection='3d')
 ax.contour3D(x, y, net, 100, cmap='plasma')
